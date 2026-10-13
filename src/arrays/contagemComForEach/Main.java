@@ -2,14 +2,16 @@ package arrays.contagemComForEach;
 
 public class Main {
     public static void main(String[] args) {
-        char[] letras = {'a', 'e', 'i', 'o', 'u'};
+        int[] valores = {1, 2, 4, 1, 6, 36, 77};
 
-        char letraProcurada = 'i';
+        int maiorValor = valores[0];
 
-        for (char letra : letras) {
-            if (letra == letraProcurada) {
-                System.out.printf("Letra encontrada: %c", letra);
+        for (int valor : valores) {
+            System.out.println(valor);
+            if (valor > maiorValor) {
+                maiorValor = valor;
             }
         }
+        System.out.printf("O maior valor é %d%n", maiorValor);
     }
 }
